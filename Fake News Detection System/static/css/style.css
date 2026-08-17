@@ -1,0 +1,675 @@
+body{
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    min-height:100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.card-body{
+    padding:40px;
+}
+
+h1{
+    font-weight:bold;
+}
+
+textarea{
+    resize:none;
+    border-radius:12px;
+    font-size:17px;
+}
+
+textarea:focus{
+    box-shadow:none;
+    border:2px solid #0d6efd;
+}
+
+.btn{
+    border-radius:10px;
+    padding:12px 35px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.alert{
+    border:none;
+    border-radius:15px;
+}
+
+.progress {
+    height: 28px;
+    border-radius: 15px;
+}
+
+.progress-bar {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* ===============================
+   Confidence Meter
+================================ */
+
+.confidence-meter{
+    display:flex;
+    justify-content:center;
+    margin:30px 0;
+}
+
+.gauge{
+
+    --percentage:0;
+
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    position:relative;
+
+}
+
+.gauge-fill{
+
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+
+}
+
+.gauge-real{
+
+    background:
+    conic-gradient(
+        #198754 calc(var(--percentage) * 1%),
+        #e9ecef 0
+    );
+
+}
+
+.gauge-fake{
+
+    background:
+    conic-gradient(
+        #dc3545 calc(var(--percentage) * 1%),
+        #e9ecef 0
+    );
+
+}
+
+.gauge-cover{
+
+    position:absolute;
+
+    width:160px;
+    height:160px;
+
+    background:white;
+
+    border-radius:50%;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.gauge-cover h2{
+
+    font-size:2rem;
+    font-weight:bold;
+
+}
+
+/* =========================
+   Dark Mode
+========================= */
+
+body.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+body.dark-mode .card{
+    background:#1e1e1e;
+    color:white;
+}
+
+body.dark-mode .table{
+    color:white;
+}
+
+body.dark-mode .table-light{
+    background:#343a40;
+}
+
+body.dark-mode textarea{
+    background:#2d2d2d;
+    color:white;
+    border-color:#555;
+}
+
+body.dark-mode textarea::placeholder{
+    color:#bbb;
+}
+
+body.dark-mode .navbar{
+    background:#000 !important;
+}
+
+
+/* Improve Dark Mode */
+
+body.dark-mode .main-card{
+    background:#1f1f1f;
+}
+
+body.dark-mode .stat-card{
+    background:#242424;
+}
+
+body.dark-mode .lead{
+    color:#bdbdbd !important;
+}
+
+body.dark-mode .form-label{
+    color:white;
+}
+
+body.dark-mode hr{
+    border-color:#444;
+}
+
+body.dark-mode .btn-primary{
+    background:#0d6efd;
+}
+
+body.dark-mode .gauge-cover{
+    background:#1f1f1f;
+    color:white;
+}
+
+body.dark-mode .badge{
+    color:white;
+}
+
+body.dark-mode footer p{
+    color:#bdbdbd !important;
+}
+
+/* ==========================
+   Analytics Dashboard
+========================== */
+
+#analytics {
+    margin-top: 80px;
+}
+
+.analytics-card{
+
+    height:230px;
+
+    border-radius:20px;
+
+    transition:0.3s;
+
+    border:none;
+
+}
+
+.insight-box{
+
+    background:#f8f9fa;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    height:100%;
+
+    transition:.3s;
+
+    border-left:5px solid #0d6efd;
+
+}
+
+.insight-box:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+.insight-box h6{
+
+    color:#6c757d;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+
+}
+
+.dark-mode .insight-box{
+
+    background:#222;
+
+}
+
+.dark-mode .insight-box h6{
+
+    color:#ccc;
+
+}
+
+.analytics-card .card-body{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.analytics-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.analytics-card i{
+
+    font-size:52px;
+
+    margin-bottom:15px;
+
+}
+
+.analytics-card h6{
+
+    color:#6c757d;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+}
+
+.analytics-card h3{
+
+    font-weight:700;
+
+    font-size:2rem;
+
+    margin:0;
+
+}
+
+/* ==========================
+   Doughnut Chart
+========================== */
+
+/* ==========================
+   Charts
+========================== */
+
+.chart-container,
+.line-chart-container,
+.bar-chart-container{
+
+    width:100%;
+    max-width:900px;
+    height:350px;
+
+    margin:30px auto;
+
+    position:relative;
+
+}
+
+.bar-chart-container{
+
+    max-width:800px;
+
+}
+
+/* ==========================
+   Analytics Dashboard
+========================== */
+
+.analytics-card{
+
+    border:none;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.35s ease;
+
+    cursor:pointer;
+
+}
+
+.analytics-card .card-body{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.analytics-card:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.30);
+
+}
+
+.analytics-card i{
+
+    font-size:52px;
+
+    margin-bottom:15px;
+
+    transition:.35s ease;
+
+}
+
+.analytics-card:hover i{
+
+    transform:scale(1.15) rotate(5deg);
+
+}
+
+.analytics-card h6{
+
+    color:#6c757d;
+
+    font-weight:600;
+
+}
+
+.analytics-card h3{
+
+    font-weight:700;
+
+    font-size:2rem;
+
+}
+
+/* ==========================
+   Card Animation
+========================== */
+
+.card{
+
+    transition:.35s ease;
+
+}
+
+.card:hover{
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+/* ==========================
+   Fade Animation
+========================== */
+
+.chart-container,
+.line-chart-container,
+.bar-chart-container{
+
+    animation:fadeInUp .8s ease;
+
+}
+
+@keyframes fadeInUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   Counter
+========================== */
+
+.counter{
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.counter:hover{
+
+    color:#0d6efd;
+
+    transform:scale(1.1);
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width:992px){
+
+    .analytics-card{
+
+        min-height:210px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .chart-container,
+    .line-chart-container,
+    .bar-chart-container{
+
+        height:300px;
+
+    }
+
+    .analytics-card{
+
+        min-height:auto;
+
+    }
+
+}
+
+/* ==========================================================
+   CONFIDENCE GAUGE
+========================================================== */
+
+.confidence-gauge{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:20px 0;
+}
+
+.gauge{
+    position:relative;
+    width:220px;
+    height:220px;
+}
+
+.gauge svg{
+    width:220px;
+    height:220px;
+    transform:rotate(-90deg);
+}
+
+.gauge-bg{
+    fill:none;
+    stroke:#e9ecef;
+    stroke-width:14;
+}
+
+.gauge-progress{
+    fill:none;
+    stroke:#0d6efd;
+    stroke-width:14;
+    stroke-linecap:round;
+
+    stroke-dasharray:565;
+    stroke-dashoffset:565;
+
+    transition:stroke-dashoffset 1.8s ease,
+               stroke 0.5s ease;
+}
+
+.gauge-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+
+.gauge-text h2{
+    margin:0;
+    font-size:34px;
+    font-weight:700;
+    color:#212529;
+}
+
+.gauge-text small{
+    display:block;
+    margin-top:6px;
+    font-size:15px;
+    color:#6c757d;
+}
+
+/* Dark Mode */
+
+body.dark-mode .gauge-bg{
+    stroke:#3d3d3d;
+}
+
+body.dark-mode .gauge-text h2{
+    color:#ffffff;
+}
+
+body.dark-mode .gauge-text small{
+    color:#cccccc;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+.footer{
+
+    background:#0f172a;
+
+    color:#ffffff;
+
+    padding:50px 0 25px;
+
+    margin-top:80px;
+
+}
+
+.footer h5,
+.footer h6{
+
+    color:#ffffff;
+
+    margin-bottom:18px;
+
+    font-weight:600;
+
+}
+
+.footer p{
+
+    color:#cbd5e1;
+
+    line-height:1.7;
+
+}
+
+.footer-links{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.footer-links li{
+
+    margin-bottom:8px;
+
+    color:#cbd5e1;
+
+}
+
+.footer hr{
+
+    border-color:rgba(255,255,255,.15);
+
+    margin:30px 0;
+
+}
+
+.footer small{
+
+    color:#94a3b8;
+
+}
+

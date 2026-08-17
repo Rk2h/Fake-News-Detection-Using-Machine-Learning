@@ -1,0 +1,62 @@
+[
+    {
+        "news": "The Reserve Bank of India kept its benchmark policy rate unchanged as policymakers assessed inflation trends and economi...",
+        "prediction": "FAKE NEWS",
+        "confidence": 53.75,
+        "datetime": "17-08-2026 15:55:43"
+    },
+    {
+        "news": "The Reserve Bank of India has announced a new policy requiring all citizens to deposit ₹10,000 with their banks before t...",
+        "prediction": "FAKE NEWS",
+        "confidence": 59.8,
+        "datetime": "17-08-2026 15:53:09"
+    },
+    {
+        "news": "Breaking News: The Government of India has announced that every citizen will receive ₹25,000 directly in their bank acco...",
+        "prediction": "FAKE NEWS",
+        "confidence": 51.97,
+        "datetime": "17-08-2026 15:51:35"
+    },
+    {
+        "news": "India's central bank kept its benchmark interest rate unchanged at 5.25 percent as policymakers waited for clearer evide...",
+        "prediction": "REAL NEWS",
+        "confidence": 51.49,
+        "datetime": "17-08-2026 15:49:49"
+    },
+    {
+        "news": "Russian missile attacks struck the Kyiv region of Ukraine, killing people and injuring dozens according to Ukrainian off...",
+        "prediction": "REAL NEWS",
+        "confidence": 60.34,
+        "datetime": "17-08-2026 15:46:43"
+    },
+    {
+        "news": "Gold prices increased on Monday as the U.S. dollar weakened and expectations for another Federal Reserve interest-rate i...",
+        "prediction": "REAL NEWS",
+        "confidence": 51.15,
+        "datetime": "17-08-2026 15:46:16"
+    },
+    {
+        "news": "The United States is considering asking international partners to choose between American and Chinese technology ecosyst...",
+        "prediction": "FAKE NEWS",
+        "confidence": 65.78,
+        "datetime": "17-08-2026 15:44:58"
+    },
+    {
+        "news": "U.S. stocks ended lower on Friday as investors assessed economic data and continuing tensions in the Middle East. The S&...",
+        "prediction": "REAL NEWS",
+        "confidence": 61.17,
+        "datetime": "17-08-2026 15:44:12"
+    },
+    {
+        "news": "India's central bank kept its benchmark interest rate unchanged at 5.25 percent as policymakers waited for clearer evide...",
+        "prediction": "REAL NEWS",
+        "confidence": 51.49,
+        "datetime": "17-08-2026 15:43:48"
+    },
+    {
+        "news": "India's foreign exchange reserves climbed above $700 billion as strong foreign currency inflows helped strengthen the co...",
+        "prediction": "REAL NEWS",
+        "confidence": 53.71,
+        "datetime": "17-08-2026 15:43:00"
+    }
+]
